@@ -18,6 +18,10 @@ class Soldier(pygame.sprite.Sprite):
         self.rect.center = (x,y)
 
 
+    def draw(self):
+        screen.blit(self.img, self.rect)
+
+
 player = Soldier(200, 200, 3)        
 
 
@@ -26,7 +30,7 @@ run = True
 
 while run:
 
-    screen.blit(player.img, player.rect)
+    player.draw()
 
 
     for event in pygame.event.get():
