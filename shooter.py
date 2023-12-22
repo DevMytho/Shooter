@@ -88,9 +88,9 @@ while run:
 			run = False
 		#keyboard presses
 		if event.type == pygame.KEYDOWN:
-			if event.key == pygame.K_a or pygame.K_LEFT:
+			if event.key == pygame.K_a:
 				moving_left = True
-			if event.key == pygame.K_d or pygame.K_RIGHT:
+			if event.key == pygame.K_d:
 				moving_right = True
 			if event.key == pygame.K_ESCAPE:
 				run = False
@@ -98,9 +98,9 @@ while run:
 
 		#keyboard button released
 		if event.type == pygame.KEYUP:
-			if event.key == pygame.K_a or pygame.K_LEFT:
+			if event.key == pygame.K_a:
 				moving_left = False
-			if event.key == pygame.K_d or pygame.K_RIGHT:
+			if event.key == pygame.K_d:
 				moving_right = False
 
 
