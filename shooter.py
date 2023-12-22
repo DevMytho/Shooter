@@ -9,16 +9,16 @@ SCREEN_HEIGHT = int(SCREEN_WIDTH * 0.8)
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption('Shooter')
 
-#set framerate
+#setting framerate
 clock = pygame.time.Clock()
 FPS = 60
 
-#define player action variables
+#player action variables
 moving_left = False
 moving_right = False
 
 
-#define colours
+#colours
 BG = (144, 201, 120)
 
 def draw_bg():
@@ -44,7 +44,7 @@ class Soldier(pygame.sprite.Sprite):
 		dx = 0
 		dy = 0
 
-		#assign movement variables if moving left or right
+		#assigning movement variables if moving left or right
 		if moving_left:
 			dx = -self.speed
 			self.flip = True
@@ -55,7 +55,7 @@ class Soldier(pygame.sprite.Sprite):
 			self.direction = 1
 
 
-		#update rectangle position
+		#updating rectangle position
 		self.rect.x += dx
 		self.rect.y += dy
 
